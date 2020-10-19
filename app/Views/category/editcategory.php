@@ -1,13 +1,13 @@
 <body>
     <div class="container">
 
-        <h2>Cadastro de Categoria</h2>
+        <h2>Editar Categoria</h2>
 
         <form method="POST" id="descricao" >
             <div class="form-group row">
                 <label for="inputdatobservacao" class="col-sm-2 col-form-label">Descrição da Categoria</label>
                 <div class="col-sm-10">
-                    <textarea rows="4" class="form-control" name="category" placeholder="Descrição da Categoria"></textarea>
+                <td><textarea name="category" rows="4" cols="16"><?php echo $descricao['id']; ?></textarea> </td>
                 </div>
             </div>
             <div class="form-group row">

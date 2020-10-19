@@ -35,6 +35,9 @@ $routes->setAutoRoute(true);
 $routes->get('/category', 'CategoryController::index');
 $routes->get('/new/category', 'CategoryController::create');
 $routes->post('/new/category', 'CategoryController::store');
+$routes->get('/edit/category/(:num)', 'CategoryController::edit');
+$routes->post('/edit/category/(:num)', 'CategoryController::update');
+$routes->post('/delete/category/(:num)', 'CategoryController::delete');
 
 
 //Routes Controller AssigmentController

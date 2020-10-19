@@ -28,7 +28,10 @@
                     <td></td>
                     <td></td>
 
-                    <td><a href="#" class="btn btn-primary">Alterar</a></td>
+                    <td>
+                        <a href="/edit/category/<?php echo $dat['id']; ?>" class="btn btn-primary">Alterar</a>
+                        <a  href="<?php echo base_url(); ?>/delete/category/<?php echo $dat['id']; ?>" class="btn btn-primary">Delete</a>
+                    </td>
                 </tr>
                 <?php 
             }
