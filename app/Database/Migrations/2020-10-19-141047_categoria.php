@@ -15,7 +15,7 @@ class Categoria extends Migration
 				'unsigned' => TRUE,
 				'auto_increment' => TRUE
 			],
-			'descicao' => [
+			'descricao' => [
 				'type' => 'TEXT',
 				'null' => FALSE
 			]

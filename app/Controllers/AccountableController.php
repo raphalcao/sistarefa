@@ -1,12 +1,12 @@
 <?php namespace App\Controllers;
 
-class Home extends BaseController
+class AccountableController extends BaseController
 {
 	public function index()
 	{
 		
 		echo view('viewheader');
-		echo view('/assigment/taskrecord');
+		echo view('/accountable/taskaccountable');
 		echo view('viewfooter');
 	}
 
@@ -14,7 +14,7 @@ class Home extends BaseController
 	{
 		
 		echo view('viewheader');
-		echo view('/assigment/newtask');
+		echo view('/accountable/newaccountable');
 		echo view('viewfooter');
 	}
 	

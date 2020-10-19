@@ -11,9 +11,11 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Nome do Responsável</label>
+                <label for="reu_id" class="col-sm-2 col-form-label">Nome do Responsável</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Responsável" required="true">
+                    <select id="responsavel" name="responsavel" class="form-control">
+
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
