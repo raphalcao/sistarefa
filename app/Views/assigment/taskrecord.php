@@ -26,9 +26,9 @@
                 ?>
                 <tr>
                     <td><?php echo $dat['id']; ?></td>
-                    <td><?php echo $dat['descicao']; ?></td>
                     <td><?php echo $dat['id_responsavel']; ?></td>
                     <td><?php echo $dat['data_fim_tarefa']; ?></td>
+                    <td><?php echo $dat['id_categoria']; ?></td>
 
                     <td><a href="#" class="btn btn-primary">Alterar</a></td>
                 </tr>

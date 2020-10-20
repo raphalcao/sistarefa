@@ -16,7 +16,8 @@ class Categoria extends Migration
 				'auto_increment' => TRUE
 			],
 			'descricao' => [
-				'type' => 'TEXT',
+				'type' => 'VARCHAR',
+				'constraint' => '100',
 				'null' => FALSE
 			]
 		]);

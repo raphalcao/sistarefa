@@ -9,8 +9,6 @@ class CategoryModel extends Model
 {
     protected $table = 'categoria';
 
-    protected $primarykey = 'id';
-
     protected $allowedFields = ['descricao'];
     
 }
