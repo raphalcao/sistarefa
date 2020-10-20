@@ -2,7 +2,7 @@
     <div class="container">
 
         <h2>Lista de Responsáveis</h2>
-        <a href="/new/accountable" class=" btn btn-outline-primary mb-2">Nova Categoria</a>
+        <a href="/new/accountable" class=" btn btn-outline-primary mb-2">Novo Responsável</a>
 
         <table id="listareu" class="table table-striped table-bordered" style="width:100%">
 
@@ -16,16 +16,21 @@
                 </tr>
             </thead>
             <tbody>
-
+            <?php 
+            foreach($accountable as $dat){
+                ?>
 
                 <tr>
-                    <td>1</td>
-                    <td>Raphael Falcão</td>
+                    <td><?php echo $dat['id']; ?></td>
+                    <td><?php echo $dat['nome']; ?></td>
                     <td></td>
                     <td></td>
 
                     <td><a href="#" class="btn btn-primary">Alterar</a></td>
                 </tr>
+                <?php 
+            }
+            ?>
 
             </tbody>
 

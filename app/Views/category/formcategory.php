@@ -1,13 +1,16 @@
 <body>
     <div class="container">
 
-        <h2>Editar Categoria</h2>
+        <h2><?php echo $titulo ?></h2>
+        <strong> <?php echo $msg ?></strong>
 
         <form method="POST" id="descricao" >
             <div class="form-group row">
                 <label for="inputdatobservacao" class="col-sm-2 col-form-label">Descrição da Categoria</label>
                 <div class="col-sm-10">
-                <td><textarea name="category" rows="4" cols="16"><?php echo $descricao['id']; ?></textarea> </td>
+                    <textarea rows="4" class="form-control" name="descricao" placeholder="Descrição da Categoria">
+                        <?php echo isset($categoria) ? $categoria['id'] : ''?>
+                    </textarea>
                 </div>
             </div>
             <div class="form-group row">

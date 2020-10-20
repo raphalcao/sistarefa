@@ -12,12 +12,5 @@ class CategoryModel extends Model
     protected $primarykey = 'id';
 
     protected $allowedFields = ['descricao'];
-
-    public function getCategory($id = null)
-    {
-            if ($id === null){
-            return $this->findAll(); 
-        }
-        return $this->asArray()->where(['id' => $id])->first();
-    }
+    
 }

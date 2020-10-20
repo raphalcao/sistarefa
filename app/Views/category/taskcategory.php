@@ -17,11 +17,10 @@
                 </tr>
             </thead>
             <tbody>
-
+            
             <?php 
             foreach($category as $dat){
                 ?>
-
                 <tr>
                     <td><?php echo $dat['id']; ?></td>
                     <td><?php echo $dat['descricao']; ?></td>

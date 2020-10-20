@@ -20,8 +20,25 @@ class AssigmentController extends BaseController
 	{
 		
 		echo view('viewheader');
-		echo view('/assigment/newtask');
+		echo view('/assigment/formtask');
 		echo view('viewfooter');
+	}
+
+	public function store()
+	{
+
+		helper(['form', 'url']);
+
+		$model = new AssigmentModel();
+
+		$data = [
+			'descricao' => $this->request->getVar('descricao'),
+			'id_responsavel' => $this->request->getVar('descricao'),
+			'id_categoria' => $this->request->getVar('descricao'),
+			'data_fim_tarefa' => $this->request->getVar('descricao'),
+		];
+		$model->insert($data);
+		return redirect()->to(base_url('assigment'));
 	}
 	
 	

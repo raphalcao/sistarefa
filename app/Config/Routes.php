@@ -43,11 +43,13 @@ $routes->post('/delete/category/(:num)', 'CategoryController::delete');
 //Routes Controller AssigmentController
 $routes->get('/', 'AssigmentController::index');
 $routes->get('/new/assigment', 'AssigmentController::create');
+$routes->post('/new/assigment', 'AssigmentController::store');
 
 
 //Routes Controller AccountableController
 $routes->get('/accountable', 'AccountableController::index');
 $routes->get('/new/accountable', 'AccountableController::create');
+$routes->post('/new/accountable', 'AccountableController::store');
 
 
 /**

@@ -9,5 +9,5 @@ class AssigmentModel extends Model
 {
     protected $table = 'tarefa';
 
-    protected $allowedFields = ['descicao', 'id_responsavel', 'id_categoria', 'data_fim_tarefa'];
+    protected $allowedFields = ['descricao', 'id_responsavel', 'id_categoria', 'data_fim_tarefa'];
 }

@@ -18,29 +18,61 @@ class CategoryController extends BaseController
 
 	public function create()
 	{
-
 		echo view('viewheader');
-		echo view('/category/newcategory');
+		echo view('/category/formcategory');
 		echo view('viewfooter');
 	}
 
 	public function store()
 	{
+
 		helper(['form', 'url']);
 
 		$model = new CategoryModel();
 
 		$data = [
-			'descricao' => $this->request->getVar('category'),
+			'descricao' => $this->request->getVar('descricao'),
 		];
-
 		$model->insert($data);
 		return redirect()->to(base_url('category'));
 	}
 
-	public function view($id = null)
+	public function edit($id = null)
 	{
-		
+
+		$model = new CategoryModel();
+
+		$data['categoria'] = $model->where('id', $id)->first();
+
+		echo view('viewheader');
+		echo view('/category/taskcategory');
+		echo view('viewfooter');
+	}
+
+
+	public function update()
+	{
+
+		helper(['form', 'url']);
+
+		$model = new CategoryModel();
+
+		$id = $this->request->getVar('id');
+
+		$data = [
+			'descricao' => $this->request->getVar('descricao'),
+		];
+
+		$model->update($id, $data);
+
+		return redirect()->to(base_url('category'));
+	}
+
+	public function delete($id = null)
+	{
+		$model = new CategoryModel();
+		$data['id'] = $model->where('id', $id)->delete();
+		return redirect()->to(base_url('category'));
 	}
 	//--------------------------------------------------------------------
 
